@@ -92,14 +92,14 @@ document.querySelector('#overlay').addEventListener('click', () => {
     document.querySelector('#overlay').classList.toggle('show');
 })
 
-window.onscroll = function() {
+// window.onscroll = function() {
 
-        if (!loadingImages) {
-            loadingImages = true;
-            currentPage++;
-            nextPage();
-        }
-    };
+//         if (!loadingImages) {
+//             loadingImages = true;
+//             currentPage++;
+//             nextPage();
+//         }
+//     };
 
 async function nextPage() {
 
