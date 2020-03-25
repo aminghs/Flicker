@@ -1,4 +1,4 @@
-# Individuell inlämningsuppgift
+# Final assignment of Javascript course in Jensen YH with these parameters:
 
 ## Instruktioner
 
