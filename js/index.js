@@ -16,10 +16,13 @@ async function getImages(){
     let text = document.querySelector('input#text').value;
     const baseUrl = 'https://api.flickr.com/services/rest';
     let perPage = document.querySelector(`#pictures`).value;
-    console.log(perPage);
+    
+    
 
     let url = `${baseUrl}?api_key=${apiKey}&method=${method}&text=${text}&page=${currentPage}&per_page=${perPage}&sort=relevance&format=json&nojsoncallback=1`;
-
+    if(text == ""){ 
+        refresh();
+    }
     try {
         
         let resp = await fetch(url);
@@ -48,10 +51,10 @@ function imgUrl(img, size){
 }
 
 function updateUI(data){
-    loadingImages = false;
+    
 
     let main = document.querySelector('main');
-
+    main.innerHTML = '';
     data.photos.photo.forEach(img => {
 
         if(img.farm !== 0) {
@@ -89,14 +92,14 @@ document.querySelector('#overlay').addEventListener('click', () => {
     document.querySelector('#overlay').classList.toggle('show');
 })
 
-// window.onscroll = function() {
+window.onscroll = function() {
 
-//         if (!loadingImages) {
-//             loadingImages = true;
-//             currentPage++;
-//             nextPage();
-//         }
-//     };
+        if (!loadingImages) {
+            loadingImages = true;
+            currentPage++;
+            nextPage();
+        }
+    };
 
 async function nextPage() {
 
