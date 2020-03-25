@@ -74,3 +74,8 @@ main img {
 .button:active {
     box-shadow: none;
 }
+
+#pictures {
+    margin: 1rem;
+    padding: 0 1rem;
+}
