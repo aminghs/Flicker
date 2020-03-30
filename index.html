@@ -5,29 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flickr App</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <section id="overlay">
-    <figure>
-        <img src="" alt="">
-        <figcaption></figcaption>
-    </figure>
-
-  </section>
-  
-    <section class="wrapper">
-      <input type="text" id="text" class="input-field">
+  <header>
+    <a href="https://flickr.com">
+      <img src="/img/Flickr_logo.png" alt="">
+    </a>
+    <h1>GET YOUR PICS</h1>
+    <aside>
       <select name="option" id="pictures">
-        <option value="100">Pics</option>
-        <option value="12">12</option>
-        <option value="24">24</option>
-        <option value="48">48</option>
-        <option value="96">96</option>
+        <option value="100">Pics/page</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
       </select>
-      <button class="button">Search for images</button>
-      <main></main>
+      <input type="search" placeholder="Search">
+      <button>
+          <ion-icon name="search"></ion-icon>
+      </button>
+    </aside>
+  </header>
+  <main>
+  </main>
+    <section id="overlay">
+      <p>Click anywhere to close</p>
+      <figure>
+        <img src="" alt="">
+      </figure>
     </section>
-    <script src="js/index.js"></script>
+    <footer>
+    <a href="#" id="next">
+      <button><ion-icon name="arrow-dropleft"></ion-icon></button>
+    </a>
+    <p id="counter"></p>
+    <a href="#" id="previous">
+      <button><ion-icon name="arrow-dropright"></ion-icon></button>
+    </a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
-</html> 
+</html>
